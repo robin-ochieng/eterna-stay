@@ -53,9 +53,15 @@ export default function RootLayout({
         <SEOJsonLd />
       </head>
       <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-sm focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider>
           <SiteHeader />
-          <main className="min-h-[60vh]">
+          <main id="main-content" role="main" className="min-h-[60vh]">
             <PageWrapper>{children}</PageWrapper>
           </main>
           <SiteFooter />

@@ -22,10 +22,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="font-semibold tracking-tight">
+          <Link href="/" className="font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md">
             <motion.span whileHover={{ letterSpacing: 1 }} transition={{ duration: 0.2 }}>EternaStay</motion.span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
             {nav.map((item) => {
               const active = pathname === item.href;
               return (
@@ -33,9 +33,10 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors",
+                      "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md",
                       active && "text-foreground"
                     )}
+                    aria-current={active ? "page" : undefined}
                   >
                     {item.label}
                   </Link>
@@ -55,13 +56,13 @@ export function SiteHeader() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" aria-label="Open menu">
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="flex flex-col gap-4">
-                <nav className="grid gap-1 mt-6">
+              <SheetContent side="right" className="flex flex-col gap-4" aria-label="Mobile menu">
+                <nav className="grid gap-1 mt-6" aria-label="Primary">
                   {nav.map((item) => (
-                    <Link key={item.href} href={item.href} className="px-2 py-2 rounded-md hover:bg-secondary">
+                    <Link key={item.href} href={item.href} className="px-2 py-2 rounded-md hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-current={pathname === item.href ? "page" : undefined}>
                       {item.label}
                     </Link>
                   ))}
