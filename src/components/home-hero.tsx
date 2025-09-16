@@ -56,7 +56,7 @@ export function HomeHero() {
                     <div className="grid gap-1">
                       <Label htmlFor="checkin">Check-in</Label>
                       <div className="relative">
-                        <Input id="checkin" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink/50 pr-10 text-ink" />
+                        <Input id="checkin" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink pr-10 text-ink" />
                         <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">
                           {/* calendar icon placeholder via text */}
                           📅
@@ -66,14 +66,14 @@ export function HomeHero() {
                     <div className="grid gap-1">
                       <Label htmlFor="checkout">Check-out</Label>
                       <div className="relative">
-                        <Input id="checkout" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink/50 pr-10 text-ink" />
+                        <Input id="checkout" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink pr-10 text-ink" />
                         <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">📅</span>
                       </div>
                     </div>
                     <div className="grid gap-1">
                       <Label htmlFor="guests">Guests</Label>
                       <div className="relative">
-                        <select id="guests" className="h-10 w-full rounded-xl border border-ink/10 bg-white px-3 text-sm shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 pr-10 text-ink">
+                        <select id="guests" className="h-10 w-full rounded-xl border border-ink/10 bg-white px-3 text-sm shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 pr-10 text-ink placeholder:text-ink">
                           <option>1 Adult</option>
                           <option>2 Adults</option>
                           <option>Family (3+)</option>
