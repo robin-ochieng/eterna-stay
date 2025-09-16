@@ -6,10 +6,20 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "2rem",
+        xl: "2rem",
+        "2xl": "2rem",
+      },
       screens: { "2xl": "1400px" },
     },
     extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "ui-sans-serif", "system-ui"],
+        body: ["var(--font-body)", "ui-sans-serif", "system-ui"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -44,6 +54,9 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        // Additional named colors for the premium coastal palette
+        ink: "#101316",
+        sand: "#F4EDE4",
       },
       borderRadius: {
         lg: "var(--radius-lg)",

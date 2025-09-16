@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
@@ -15,6 +15,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const headingFont = Plus_Jakarta_Sans({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+});
+
+const bodyFont = Inter({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +66,7 @@ export default function RootLayout({
       <head>
         <SEOJsonLd />
       </head>
-      <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
+  <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${headingFont.variable} ${bodyFont.variable} antialiased bg-background text-foreground font-body`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-sm focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"

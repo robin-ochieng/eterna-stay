@@ -3,7 +3,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="border-t mt-16">
-      <div className="container py-10 grid gap-10 md:grid-cols-4">
+      <div className="container max-w-screen-xl px-4 sm:px-6 lg:px-8 py-12 grid gap-8 md:grid-cols-4">
         <div className="space-y-3">
           <div className="text-lg font-semibold">EternaStay</div>
           <p className="text-sm text-muted-foreground">Mombasa, Kenya</p>
