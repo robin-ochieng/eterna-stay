@@ -50,8 +50,8 @@ export function HomeHero() {
         <div className="absolute bottom-8 left-0 right-0">
           <div className="container max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: "easeOut", delay: 0.12 }}>
-              <Card className="mx-auto max-w-5xl rounded-3xl border border-white/15 bg-white/10 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-                <CardContent className="p-4 md:p-6">
+              <Card className="mx-auto max-w-5xl rounded-3xl border border-white/15 dark:border-white/15 bg-white/10 dark:bg-black/40 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                <CardContent className="p-4 md:p-6 text-white">
                   <div className="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4 items-end">
                     <div className="grid gap-1">
                       <Label htmlFor="checkin" className="text-white/90">Check-in</Label>

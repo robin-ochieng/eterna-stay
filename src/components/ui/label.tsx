@@ -10,7 +10,7 @@ const Label = React.forwardRef<
     ref={ref}
     className={cn(
       // Ensure readable contrast in both themes; consumers can override
-      "text-sm font-medium leading-none text-foreground dark:text-white/90 peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+      "text-sm font-medium leading-none text-[hsl(var(--foreground))] dark:text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
       className
     )}
     {...props}
