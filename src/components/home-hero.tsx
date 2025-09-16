@@ -13,7 +13,7 @@ export function HomeHero() {
       className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
       aria-label="EternaStay hero"
     >
-      <div className="relative h-[65vh] md:h-[75vh]">
+  <div className="relative h-[70vh] md:h-[82vh]">
         <motion.div initial={{ scale: 1.05, opacity: 0.6 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut" }} className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1502920917128-1aa500764f39?q=80&w=1920&auto=format&fit=crop"
@@ -35,14 +35,14 @@ export function HomeHero() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
               className="max-w-3xl"
             >
-              <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">
+              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
                 EternaStay — Modern Coastal Comfort in Mombasa
               </h1>
-              <p className="mt-3 text-base md:text-lg text-muted-foreground">
+              <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
                 A premium, minimalist escape on the Indian Ocean. Sunlit rooms, curated textures, and thoughtful service — designed for calm.
               </p>
 
-              <div className="mt-6 flex gap-3">
+              <div className="mt-8 flex gap-3">
                 <Button size="lg">Check Availability</Button>
                 <Button variant="ghost" size="lg">Explore Rooms</Button>
               </div>
@@ -50,10 +50,10 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-0 right-0">
+        <div className="absolute bottom-8 left-0 right-0">
           <div className="container">
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}>
-              <Card className="rounded-2xl shadow-md backdrop-blur bg-background/80">
+              <Card className="mx-auto max-w-5xl rounded-2xl shadow-md backdrop-blur bg-background/85">
                 <CardContent className="p-4 md:p-6">
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4 items-end">
                     <div className="grid gap-1">

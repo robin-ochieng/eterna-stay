@@ -25,7 +25,7 @@ export function SiteHeader() {
           <Link href="/" className="font-semibold tracking-tight">
             <motion.span whileHover={{ letterSpacing: 1 }} transition={{ duration: 0.2 }}>EternaStay</motion.span>
           </Link>
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6">
             {nav.map((item) => {
               const active = pathname === item.href;
               return (
@@ -46,7 +46,7 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-2">
           <div className="hidden md:block">
-            <Button asChild size="lg" className="rounded-xl shadow-sm">
+            <Button asChild size="lg" className="rounded-xl shadow-xs">
               <Link href="/book">Book Now</Link>
             </Button>
           </div>
