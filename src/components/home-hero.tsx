@@ -16,7 +16,7 @@ export function HomeHero() {
   <div className="relative h-[70vh] md:h-[82vh]">
         <motion.div initial={{ scale: 1.05, opacity: 0.6 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut" }} className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1502920917128-1aa500764f39?q=80&w=1920&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
             alt="Modern coastal hotel by the ocean at sunset"
             fill
             priority
