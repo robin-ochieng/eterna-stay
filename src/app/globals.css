@@ -28,7 +28,7 @@
   --radius-lg: 18px; /* premium, airy */
 }
 
-/* Dark mode tokens */
+/* Dark mode tokens (system) */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: 224 18% 8%;
@@ -52,6 +52,30 @@
     --ring: 201 100% 45%;
     --shadow: 220 40% 2%;
   }
+}
+
+/* Dark mode tokens (explicit class) */
+.dark {
+  --background: 224 18% 8%;
+  --foreground: 210 20% 96%;
+  --card: 224 18% 10%;
+  --card-foreground: 210 20% 96%;
+  --popover: 224 18% 10%;
+  --popover-foreground: 210 20% 96%;
+  --primary: 201 100% 45%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 224 14% 18%;
+  --secondary-foreground: 210 20% 96%;
+  --muted: 224 14% 18%;
+  --muted-foreground: 220 15% 65%;
+  --accent: 36 100% 55%;
+  --accent-foreground: 224 18% 8%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 224 14% 18%;
+  --input: 224 14% 18%;
+  --ring: 201 100% 45%;
+  --shadow: 220 40% 2%;
 }
 
 /* Base element styles */
