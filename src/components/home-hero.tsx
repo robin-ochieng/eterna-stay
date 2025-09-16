@@ -50,35 +50,35 @@ export function HomeHero() {
         <div className="absolute bottom-8 left-0 right-0">
           <div className="container max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: "easeOut", delay: 0.12 }}>
-              <Card className="mx-auto max-w-5xl rounded-3xl border border-white/15 dark:border-white/15 bg-white/10 dark:bg-black/40 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-                <CardContent className="p-4 md:p-6 text-white">
+              <Card className="mx-auto max-w-5xl rounded-3xl border border-white/15 dark:border-white/15 bg-white/70 dark:bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                <CardContent className="p-4 md:p-6 text-ink">
                   <div className="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4 items-end">
                     <div className="grid gap-1">
-                      <Label htmlFor="checkin" className="text-white/90">Check-in</Label>
+                      <Label htmlFor="checkin">Check-in</Label>
                       <div className="relative">
-                        <Input id="checkin" type="date" className="rounded-xl bg-white/85 focus:bg-white placeholder:text-ink/50 pr-10" />
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/60">
+                        <Input id="checkin" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink/50 pr-10 text-ink" />
+                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">
                           {/* calendar icon placeholder via text */}
                           📅
                         </span>
                       </div>
                     </div>
                     <div className="grid gap-1">
-                      <Label htmlFor="checkout" className="text-white/90">Check-out</Label>
+                      <Label htmlFor="checkout">Check-out</Label>
                       <div className="relative">
-                        <Input id="checkout" type="date" className="rounded-xl bg-white/85 focus:bg-white placeholder:text-ink/50 pr-10" />
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/60">📅</span>
+                        <Input id="checkout" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink/50 pr-10 text-ink" />
+                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">📅</span>
                       </div>
                     </div>
                     <div className="grid gap-1">
-                      <Label htmlFor="guests" className="text-white/90">Guests</Label>
+                      <Label htmlFor="guests">Guests</Label>
                       <div className="relative">
-                        <select id="guests" className="h-10 w-full rounded-xl border border-white/20 bg-white/85 px-3 text-sm shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 pr-10 text-ink">
+                        <select id="guests" className="h-10 w-full rounded-xl border border-ink/10 bg-white px-3 text-sm shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 pr-10 text-ink">
                           <option>1 Adult</option>
                           <option>2 Adults</option>
                           <option>Family (3+)</option>
                         </select>
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/60">👤</span>
+                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">👤</span>
                       </div>
                     </div>
                     <div className="grid gap-1">

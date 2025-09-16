@@ -9,8 +9,8 @@ const Label = React.forwardRef<
   <LabelPrimitive.Root
     ref={ref}
     className={cn(
-      // Ensure readable contrast in both themes; consumers can override
-      "text-sm font-medium leading-none text-[hsl(var(--foreground))] dark:text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+      // Force premium dark label across themes; consumers can override per-use
+      "text-sm font-medium leading-none text-ink peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
       className
     )}
     {...props}
