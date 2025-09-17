@@ -50,35 +50,48 @@ export function HomeHero() {
         <div className="absolute bottom-8 left-0 right-0">
           <div className="container max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: "easeOut", delay: 0.12 }}>
-              <Card className="mx-auto max-w-5xl rounded-3xl border border-white/15 dark:border-white/15 bg-white/70 dark:bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-                <CardContent className="p-4 md:p-6 text-ink">
+              <Card className="relative mx-auto max-w-5xl rounded-3xl border border-white/15 bg-white/10 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] dark:border-white/20 dark:bg-white/12 after:absolute after:inset-0 after:rounded-3xl after:bg-black/10 after:pointer-events-none dark:after:bg-black/15">
+                <CardContent className="relative p-4 md:p-6 text-ink z-10">
                   <div className="grid grid-cols-1 gap-3 md:grid-cols-4 md:gap-4 items-end">
                     <div className="grid gap-1">
-                      <Label htmlFor="checkin">Check-in</Label>
-                      <div className="relative">
-                        <Input id="checkin" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink pr-10 text-ink" />
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">
-                          {/* calendar icon placeholder via text */}
-                          📅
-                        </span>
+                      <Label htmlFor="checkin" className="text-ink/80 dark:text-white/85 font-medium leading-none">Check-in</Label>
+                      <div className="relative group">
+                        <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-ink/60 dark:text-white/70">📅</span>
+                        <Input
+                          id="checkin"
+                          type="text"
+                          aria-label="Check-in date"
+                          placeholder="dd/mm/yyyy"
+                          className="w-full rounded-xl pl-9 pr-3 py-3 bg-white/85 text-ink placeholder:text-ink/60 border border-ink/10 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent/60 focus:border-accent/60 dark:bg-white/12 dark:text-white dark:placeholder:text-white/65 dark:border-white/25 dark:hover:border-white/35 dark:focus:ring-accent/70"
+                        />
                       </div>
                     </div>
                     <div className="grid gap-1">
-                      <Label htmlFor="checkout">Check-out</Label>
-                      <div className="relative">
-                        <Input id="checkout" type="date" className="rounded-xl bg-white focus:bg-white placeholder:text-ink pr-10 text-ink" />
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">📅</span>
+                      <Label htmlFor="checkout" className="text-ink/80 dark:text-white/85 font-medium leading-none">Check-out</Label>
+                      <div className="relative group">
+                        <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-ink/60 dark:text-white/70">📅</span>
+                        <Input
+                          id="checkout"
+                          type="text"
+                          aria-label="Check-out date"
+                          placeholder="dd/mm/yyyy"
+                          className="w-full rounded-xl pl-9 pr-3 py-3 bg-white/85 text-ink placeholder:text-ink/60 border border-ink/10 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent/60 focus:border-accent/60 dark:bg-white/12 dark:text-white dark:placeholder:text-white/65 dark:border-white/25 dark:hover:border-white/35 dark:focus:ring-accent/70"
+                        />
                       </div>
                     </div>
                     <div className="grid gap-1">
-                      <Label htmlFor="guests">Guests</Label>
-                      <div className="relative">
-                        <select id="guests" className="h-10 w-full rounded-xl border border-ink/10 bg-white px-3 text-sm shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 pr-10 text-ink placeholder:text-ink">
+                      <Label htmlFor="guests" className="text-ink/80 dark:text-white/85 font-medium leading-none">Guests</Label>
+                      <div className="relative group">
+                        <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-ink/60 dark:text-white/70">👤</span>
+                        <select
+                          id="guests"
+                          aria-label="Number of guests"
+                          className="w-full rounded-xl pl-9 pr-3 py-3 border border-ink/10 bg-white/85 text-sm shadow-sm text-ink placeholder:text-ink/60 focus:outline-none focus:ring-2 focus:ring-accent/60 focus:border-accent/60 dark:bg-white/12 dark:text-white dark:placeholder:text-white/65 dark:border-white/25 dark:hover:border-white/35 dark:focus:ring-accent/70"
+                        >
                           <option>1 Adult</option>
                           <option>2 Adults</option>
                           <option>Family (3+)</option>
                         </select>
-                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-ink/70">👤</span>
                       </div>
                     </div>
                     <div className="grid gap-1">
